@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Sardorbek Sobirjonov</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      color: white;
+      position: relative;
+    }
+    body::before {
+      content:''; position:absolute; inset:0;
+      background: rgba(0,0,0,0.65); z-index:-1;
+    }
+    .page-appear { animation: fadeInUp 0.9s ease forwards; opacity:0; transform: translateY(20px); }
+    @keyframes fadeInUp { 0% {opacity:0; transform: translateY(20px);} 100% {opacity:1; transform: translateY(0);} }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .glass:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.5); }
+
+    .service-icon {
+      width:60px; height:60px; display:grid; place-items:center;
+      border-radius:12px; background: rgba(255,255,255,0.08);
+      transition: all 0.5s ease;
+      font-size: 1.5rem;
+    }
+    .service-icon:hover {
+      transform: rotateY(180deg) scale(1.15);
+      background: linear-gradient(135deg,#2563eb,#7c3aed);
+      color:#fff;
+    }
+
+    @media (max-width: 1024px) { .grid-cols-service { grid-template-columns: repeat(2,1fr) !important; } }
+    @media (max-width: 640px) { .grid-cols-service { grid-template-columns: 1fr !important; } }
+
+    /* Next page button */
+    .next-page-btn {
+      background: linear-gradient(90deg,#2563eb,#7c3aed);
+      padding: 0.6rem 1.5rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .next-page-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+  </style>
+</head>
+<body class="antialiased relative">
+
+<main class="min-h-screen flex items-center justify-center p-6">
+  <section class="w-full max-w-6xl mx-auto page-appear">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold text-red-400 mb-2">Our Services</h2>
+      <p class="text-gray-300">We provide the best web, mobile, and office services for you</p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-3 gap-8 grid-cols-service">
+      
+      <!-- Web Development -->
+      <div class="glass p-6 text-center lift">
+        <div class="flex justify-center mb-4">
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+        </div>
+        <h3 class="font-semibold text-xl mb-2">Web Development</h3>
+        <p class="text-gray-300 text-sm">We create responsive and modern websites.</p>
+      </div>
+
+      <!-- Mobile App -->
+      <div class="glass p-6 text-center lift">
+        <div class="flex justify-center mb-4">
+          <div class="service-icon"><i class="fab fa-android"></i></div>
+        </div>
+        <h3 class="font-semibold text-xl mb-2">Mobile App</h3>
+        <p class="text-gray-300 text-sm">We develop Android and iOS applications.</p>
+      </div>
+
+      <!-- UI/UX Design -->
+      <div class="glass p-6 text-center lift">
+        <div class="flex justify-center mb-4">
+          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+        </div>
+        <h3 class="font-semibold text-xl mb-2">UI/UX Design</h3>
+        <p class="text-gray-300 text-sm">We design beautiful and user-friendly interfaces.</p>
+      </div>
+
+      <!-- Video Editing -->
+      <div class="glass p-6 text-center lift">
+        <div class="flex justify-center mb-4">
+          <div class="service-icon"><i class="fas fa-video"></i></div>
+        </div>
+        <h3 class="font-semibold text-xl mb-2">Video Editing</h3>
+        <p class="text-gray-300 text-sm">We professionally edit and produce videos.</p>
+      </div>
+
+      <!-- Audio Services -->
+      <div class="glass p-6 text-center lift">
+        <div class="flex justify-center mb-4">
+          <div class="service-icon"><i class="fas fa-microphone-alt"></i></div>
+        </div>
+        <h3 class="font-semibold text-xl mb-2">Audio</h3>
+        <p class="text-gray-300 text-sm">Recording, editing, and mastering audio services.</p>
+      </div>
+
+      <!-- MS Office -->
+      <div class="glass p-6 text-center lift">
+        <div class="flex justify-center mb-4 space-x-3">
+          <div class="service-icon"><i class="fas fa-file-word"></i></div>
+          <div class="service-icon"><i class="fas fa-file-excel"></i></div>
+          <div class="service-icon"><i class="fas fa-file-powerpoint"></i></div>
+        </div>
+        <h3 class="font-semibold text-xl mb-2">MS Office</h3>
+        <p class="text-gray-300 text-sm">Professional work with Word, Excel, and PowerPoint files.</p>
+      </div>
+
+      <!-- Sketch / Drawing -->
+      <div class="glass p-6 text-center lift">
+        <div class="flex justify-center mb-4">
+          <div class="service-icon"><i class="fas fa-pencil-alt"></i></div>
+        </div>
+        <h3 class="font-semibold text-xl mb-2">Sketching</h3>
+        <p class="text-gray-300 text-sm">Fast and high-quality visual sketches.</p>
+      </div>
+
+      <!-- Quick Tasks -->
+      <div class="glass p-6 text-center lift">
+        <div class="flex justify-center mb-4">
+          <div class="service-icon"><i class="fas fa-bolt"></i></div>
+        </div>
+        <h3 class="font-semibold text-xl mb-2">Quick Tasks</h3>
+        <p class="text-gray-300 text-sm">We complete your tasks quickly and efficiently.</p>
+      </div>
+
+         <!-- Quick Tasks -->
+      <div class="glass p-6 text-center lift">
+        <div class="flex justify-center mb-4">
+          <div class="service-icon"><i class="fas fa-bolt"></i></div>
+        </div>
+        <h3 class="font-semibold text-xl mb-2">Figma</h3>
+        <p class="text-gray-300 text-sm">We complete your tasks quickly and efficiently.</p>
+      </div>
+
+    </div>
+
+    <!-- Next Page Button -->
+    <div class="mt-12 text-center">
+      <a href="mywork.html" class="next-page-btn inline-block text-white">➡️ Next Page</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-12 text-center text-xs text-gray-400">© <span id="year"></span> Sardorbek Sobirjonov — All rights reserved.</div>
+
+  </section>
+</main>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Work — Portfolio</title>
+  <!-- Tailwind Play CDN (for quick prototype) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Extra small customization for the demo background overlay */
+    .bg-portfolio {
+      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1920&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <main class="min-h-screen py-16 px-6 lg:px-24 bg-portfolio relative">
+    <!-- overlay to darken the background image for legibility -->
+    <div class="absolute inset-0 bg-black/45 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <header class="mb-10 text-center text-white">
+        <h1 class="text-3xl md:text-4xl font-semibold">My Work</h1>
+        <!-- <p class="mt-2 text-sm md:text-base opacity-90">Tanlangan loyihalar — rasm, izoh va havola bilan.</p> -->
+      </header>
+
+      <!-- Grid: 2 qator, 4 ta element qatorida (desktop) -->
+      <section aria-labelledby="projects-heading">
+        <h2 id="projects-heading" class="sr-only">Portfolio projects</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Card 1 -->
+          <article class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <figure class="h-40 sm:h-36 lg:h-44 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Project 1 screenshot" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform"/>
+            </figure>
+            <div class="p-4">
+              <h3 class="text-lg font-medium">Loyha 1</h3>
+              <p class="mt-2 text-sm text-gray-600">Bu loyihaning qisqacha izohi. React va Tailwind bilan qurilgan veb ilova.</p>
+              <div class="mt-4 flex items-center gap-3">
+                <a href="#" class="inline-flex items-center justify-center px-3 py-2 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500">Ko‘rish</a>
+                <a href="#" class="text-xs text-indigo-600 hover:underline">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <figure class="h-40 sm:h-36 lg:h-44 overflow-hidden">
+              <img src="image.png" alt="Project 2 screenshot" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform"/>
+            </figure>
+            <div class="p-4">
+              <h3 class="text-lg font-medium">Ux Disagn</h3>
+              <p class="mt-2 text-sm text-gray-600">Web disagin</p>
+              <div class="mt-4 flex items-center gap-3">
+                <a href="https://www.figma.com/design/zwd1N7kCSzPrCUgztQ6Eqq/Untitled?t=kpBQnwcTpT73Mnl2-0" class="inline-flex items-center justify-center px-3 py-2 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500">Ko‘rish</a>
+                <a href="#" class="text-xs text-indigo-600 hover:underline">Case study</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <figure class="h-40 sm:h-36 lg:h-44 overflow-hidden">
+              <img src="qrkod2.jpg" alt="Project 3 screenshot" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform"/>
+            </figure>
+            <div class="p-4">
+              <h3 class="text-lg font-medium">Qr Kod Pro</h3>
+              <p class="mt-2 text-sm text-gray-600">Qr kod Pro</p>
+              <div class="mt-4 flex items-center gap-3">
+                <a href="https://qrkodd.vercel.app/" class="inline-flex items-center justify-center px-3 py-2 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500">Korish</a>
+                <a href="#" class="text-xs text-indigo-600 hover:underline">Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <figure class="h-40 sm:h-36 lg:h-44 overflow-hidden">
+              <img src="doc.jpg" alt="Project 4 screenshot" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform"/>
+            </figure>
+            <div class="p-4">
+              <h3 class="text-lg font-medium">Hospitol</h3>
+              <p class="mt-2 text-sm text-gray-600">SHifohona web site.</p>
+              <div class="mt-4 flex items-center gap-3">
+                <a href="https://themewagon.github.io/MediLab/" class="inline-flex items-center justify-center px-3 py-2 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500">Ko‘rish</a>
+                <a href="#" class="text-xs text-indigo-600 hover:underline">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <figure class="h-40 sm:h-36 lg:h-44 overflow-hidden">
+              <img src="sayt.jpg" alt="Project 5 screenshot" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform"/>
+            </figure>
+            <div class="p-4">
+              <h3 class="text-lg font-medium">Savdo Sayt</h3>
+              <p class="mt-2 text-sm text-gray-600">Interaktiv data dashboard va vizualizatsiya.</p>
+              <div class="mt-4 flex items-center gap-3">
+                <a href="#" class="inline-flex items-center justify-center px-3 py-2 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500">Korish</a>
+                <!-- <a href="https://themewagon.github.io/aroma/category.html" class="text-xs text-indigo-600 hover:underline">Korish</a> -->
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <figure class="h-40 sm:h-36 lg:h-44 overflow-hidden">
+              <img src="qr.jpg" alt="Project 6 screenshot" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform"/>
+            </figure>
+            <div class="p-4">
+              <h3 class="text-lg font-medium">QR kod</h3>
+              <p class="mt-2 text-sm text-gray-600">Bu bot orqali hohlagan Qr kod Yarata olasz</p>
+              <div class="mt-4 flex items-center gap-3">
+                <a href="#" class="inline-flex items-center justify-center px-3 py-2 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500">Ko‘rish</a>
+                <a href="#" class="text-xs text-indigo-600 hover:underline"></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <figure class="h-40 sm:h-36 lg:h-44 overflow-hidden">
+              <img src="oyin.jpg" alt="Project 7 screenshot" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform"/>
+            </figure>
+            <div class="p-4">
+              <h3 class="text-lg font-medium">JS game </h3>
+              <p class="mt-2 text-sm text-gray-600">Oziga hos Game</p>
+              <div class="mt-4 flex items-center gap-3">
+                <a href="#" class="inline-flex items-center justify-center px-3 py-2 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500">Ko‘rish</a>
+                <!-- <a href="#" class="text-xs text-indigo-600 hover:underline">Specs</a> -->
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <figure class="h-40 sm:h-36 lg:h-44 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?q=80&w=1200&auto=format&fit=crop" alt="Project 8 screenshot" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform"/>
+            </figure>
+            <div class="p-4">
+              <h3 class="text-lg font-medium">Logo Bot</h3>
+              <p class="mt-2 text-sm text-gray-600">Bu bot Orqali sz hohlagan logo yizni 3D korinishda  yarta olasz</p>
+              <div class="mt-4 flex items-center gap-3">
+                <a href="#" class="inline-flex items-center justify-center px-3 py-2 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500">Ko‘rish</a>
+                <!-- <a href="#" class="text-xs text-indigo-600 hover:underline">Portfolio</a> -->
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Footer note -->
+      <footer class="mt-12 text-center text-sm text-white/90">
+        <p><a href="cantact.html">Kegingi sahifa</a></p>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>

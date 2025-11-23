@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sardorbek Sobirjonov — Portfolio</title>
+  <meta name="description" content="Sardorbek Sobirjonov — Web & Mobile Developer. Tezkor, kuchli va zamonaviy saytlar yarataman. Portfolio, xizmatlar va loyihalar.">
+  <meta name="keywords" content="Sardorbek, Sobirjonov, Web developer, Mobile app, Tailwind CSS, JavaScript, Portfolio, Figma, UI/UX">
+  <meta name="author" content="Sardorbek Sobirjonov">
+  <link rel="icon" type="image/png" href="photo_2025-10-27_07-26-33.jpg">
+  <meta property="og:title" content="Sardorbek Sobirjonov — Portfolio">
+  <meta property="og:description" content="Professional Web & Mobile Developer. Kuchli va zamonaviy loyihalar.">
+  <meta property="og:image" content="https://picsum.photos/600">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-website-url.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sardorbek Sobirjonov — Portfolio">
+  <meta name="twitter:description" content="Professional Web & Mobile Developer.">
+  <meta name="twitter:image" content="https://picsum.photos/600">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* Typing text */
+    .typed {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      letter-spacing: 0.5px;
+    }
+
+    /* nav underline pill */
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      border-radius: 2px;
+      background: #3b82f6;
+      transition: width .3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* aurora */
+    .aurora {
+      position: absolute;
+      inset: -50px;
+      background: radial-gradient(circle at top left, rgba(59,130,246,0.25), transparent 70%),
+                  radial-gradient(circle at bottom right, rgba(96,165,250,0.2), transparent 70%);
+      z-index: -1;
+    }
+
+    /* mobile menu transition */
+    #mobileMenu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    #mobileMenu.active {
+      transform: translateX(0);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-950 text-white antialiased relative">
+
+  <!-- Background -->
+  <div class="absolute inset-0 -z-10">
+    <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1920&q=80"
+         alt="Background" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/80"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="text-2xl font-bold select-none">
+          <span class="text-white">Sobirjonov</span><span class="text-blue-500">Dev</span>
+        </div>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex gap-8">
+          <a href="index.html" class="relative nav-link">Home</a>
+          <a href="aboute.html" class="relative nav-link">About</a>
+          <a href="servike.html" class="relative nav-link">Service</a>
+          <a href="mywork.html" class="relative nav-link">Work</a>
+          <a href="cantact.html" class="relative nav-link">Contact</a>
+        </nav>
+
+        <!-- Mobile button -->
+        <button id="openMenuBtn" class="md:hidden text-2xl">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile menu (aside) -->
+    <aside id="mobileMenu" class="fixed top-0 right-0 w-64 h-full bg-black/95 flex flex-col items-start px-8 py-12 gap-6 text-xl z-50">
+      <button id="closeMenuBtn" class="absolute top-6 right-6 text-3xl hover:text-red-500 transition">✖</button>
+      <a href="index.html" onclick="closeMenu()" class="hover:text-blue-400 transition">Home</a>
+      <a href="aboute.html" onclick="closeMenu()" class="hover:text-blue-400 transition">About</a>
+      <a href="servike.html" onclick="closeMenu()" class="hover:text-blue-400 transition">Service</a>
+      <a href="mywork.html" onclick="closeMenu()" class="hover:text-blue-400 transition">Work</a>
+      <a href="cantact.html" onclick="closeMenu()" class="hover:text-blue-400 transition">Contact</a>
+    </aside>
+  </header>
+
+  <!-- Hero -->
+  <main class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-20 pt-28 relative">
+    <!-- Left -->
+    <section class="w-full md:w-1/2 max-w-xl text-center md:text-left relative z-10">
+      <h2 class="text-lg text-gray-300 mb-3">Hello I'M</h2>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+        <span id="typedName" class="typed text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600"></span>
+      </h1>
+
+      <p class="text-gray-200 text-lg md:text-xl mb-6">
+        I develop <span class="text-blue-400 font-semibold">Web</span> and
+        <span class="text-blue-400 font-semibold">Mobile</span> applications
+        <em>fast</em>, <em>modern</em>, and powerful enough to move your business forward.
+        I am also skilled in <span class="text-blue-400 font-semibold">Figma</span>
+        for creating sleek designs.  
+        Working with me means guaranteed results and innovation.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <a href="#contact" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-md font-semibold shadow-md hover:shadow-lg hover:scale-105 transition">
+          Collaborate
+        </a>
+      </div>
+
+      <div class="mt-8 flex gap-6 justify-center md:justify-start text-2xl">
+        <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=z92q4sw" target="_blank" class="hover:text-pink-500 hover:scale-110 transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://t.me/sardorbeksobirjonov" target="_blank" class="hover:text-blue-400 hover:scale-110 transition">
+          <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="hover:text-red-500 hover:scale-110 transition">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Right -->
+    <aside class="w-full md:w-1/2 flex justify-center md:justify-end mb-8 md:mb-0 relative">
+      <div class="relative">
+        <div class="aurora rounded-full"></div>
+        <div class="w-44 h-44 md:w-80 md:h-80 rounded-full border-4 border-blue-500 overflow-hidden shadow-2xl relative">
+          <img src="https://picsum.photos/600" alt="Profile" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    const openBtn = document.getElementById('openMenuBtn');
+    const closeBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function openMenu() { mobileMenu.classList.add('active'); }
+    function closeMenu() { mobileMenu.classList.remove('active'); }
+
+    openBtn.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+
+    // Typing animation
+    (function(){
+      const el = document.getElementById('typedName');
+      const text = "Sardorbek Sobirjonov";
+      const delayType = 100, delayHold = 1400, delayDelete = 60;
+      let idx = 0;
+
+      async function wait(ms){ return new Promise(r=>setTimeout(r, ms)); }
+      async function loop(){
+        while(true){
+          while(idx < text.length){ idx++; el.textContent = text.slice(0, idx); await wait(delayType); }
+          await wait(delayHold);
+          while(idx > 0){ idx--; el.textContent = text.slice(0, idx); await wait(delayDelete); }
+          await wait(400);
+        }
+      }
+      loop();
+    })();
+  </script>
+</body>
+</html>
